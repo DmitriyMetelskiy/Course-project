@@ -1,4 +1,4 @@
-package main
+package database
 /*
 	creating initial database structure on mock data
  */
@@ -50,7 +50,7 @@ func InitiateDB() {
 		{Id: bson.NewObjectId(), Login: "pumba", Password: "qwer", Discount: 0, Currency: 164.5},
 		// ...
 	}
-// add test users in 'users' collection
+// add mock users in 'users' collection
 	err = userCollection.Insert(testUsers)
 	if err != nil {
 		fmt.Println(err)
@@ -63,7 +63,7 @@ func InitiateDB() {
 		{Type: "shin pads", Model: "alpha", Size: "S", Price: 80, Location: 0},
 		// ...
 	}
-// add test products in 'products' collection
+// add mock products in 'products' collection
 	err = productCollection.Insert(testProducts)
 	if err != nil {
 		fmt.Println(err)
